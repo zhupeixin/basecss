@@ -1,24 +1,29 @@
 @import "variable";
-//margin
-.margin (@size,@name: "",@link: -) {
-  .margin@{link}@{name}{
-    margin: @size;
-  }
-  .margin@{link}@{name}-top{
-    margin-top: @size;
-  }
-  .margin@{link}@{name}-right{
-    margin-right: @size;
-  }
-  .margin@{link}@{name}-bottom{
-    margin-bottom: @size;
-  }
-  .margin@{link}@{name}-left{
-    margin-left:@size;
-  }
+.box (@select,@size,@name) {
+    .@{name}{
+        @{select}: @size;
+    }
+    .@{name}-top{
+        @{select}-top: @size;
+    }
+    .@{name}-right{
+        @{select}-right: @size;
+    }
+    .@{name}-bottom{
+        @{select}-bottom: @size;
+    }
+    .@{name}-left{
+        @{select}-left:@size;
+    }
 }
-.margin (@large,large);
-.margin (@big,big);
-.margin (@normal, ,"");
-.margin (@small,small);
-.margin (@litter,litter);
+.box (margin,@large,margin-large);
+.box (margin,@big,margin-big);
+.box (margin,@normal,margin);
+.box (margin,@small,margin-small);
+.box (margin,@litter,margin-litter);
+
+.box (padding,@large,padding-large);
+.box (padding,@big,padding-big);
+.box (padding,@normal,padding);
+.box (padding,@small,padding-small);
+.box (padding,@litter,padding-litter);
