@@ -1,0 +1,24 @@
+@import "variable";
+//margin
+.margin (@size,@name: "",@link: -) {
+  .margin@{link}@{name}{
+    margin: @size;
+  }
+  .margin@{link}@{name}-top{
+    margin-top: @size;
+  }
+  .margin@{link}@{name}-right{
+    margin-right: @size;
+  }
+  .margin@{link}@{name}-bottom{
+    margin-bottom: @size;
+  }
+  .margin@{link}@{name}-left{
+    margin-left:@size;
+  }
+}
+.margin (@large,large);
+.margin (@big,big);
+.margin (@normal, ,"");
+.margin (@small,small);
+.margin (@litter,litter);

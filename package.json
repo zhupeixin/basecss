@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lessc src/base.less > dist/base.css",
-    "build": "lessc --clean-css src/base.less > dist/base.min.css"
+    "dev": "lessc src/main.less > dist/base.css",
+    "build": "lessc --clean-css src/main.less > dist/base.min.css"
   },
   "author": "朱培鑫",
   "license": "ISC",
