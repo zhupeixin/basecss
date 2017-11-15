@@ -1,29 +1,31 @@
 @import "variable";
-.box (@select,@size,@name) {
-    .@{name}{
-        @{select}: @size;
-    }
-    .@{name}-top{
-        @{select}-top: @size;
-    }
-    .@{name}-right{
-        @{select}-right: @size;
-    }
-    .@{name}-bottom{
-        @{select}-bottom: @size;
-    }
-    .@{name}-left{
-        @{select}-left:@size;
-    }
-}
-.box (margin,@large,margin-large);
-.box (margin,@big,margin-big);
-.box (margin,@normal,margin);
-.box (margin,@small,margin-small);
-.box (margin,@litter,margin-litter);
 
-.box (padding,@large,padding-large);
-.box (padding,@big,padding-big);
-.box (padding,@normal,padding);
-.box (padding,@small,padding-small);
-.box (padding,@litter,padding-litter);
+.box (@select,@size,@name) {
+  .@{name} {
+      @{select}: @size;
+  }
+  .@{name}-top {
+      @{select}-top: @size;
+  }
+  .@{name}-right {
+      @{select}-right: @size;
+  }
+  .@{name}-bottom {
+      @{select}-bottom: @size;
+  }
+  .@{name}-left {
+      @{select}-left: @size;
+  }
+}
+
+.box (margin, @large, margin-large);
+.box (margin, @big, margin-big);
+.box (margin, @normal, margin);
+.box (margin, @small, margin-small);
+.box (margin, @litter, margin-litter);
+
+.box (padding, @large, padding-large);
+.box (padding, @big, padding-big);
+.box (padding, @normal, padding);
+.box (padding, @small, padding-small);
+.box (padding, @litter, padding-litter);

@@ -1,12 +1,95 @@
 @import 'variable';
 //响应式栅格布局
+.container, .container-layout {
+  margin: 0 auto;
+  padding: 0 10px
+}
+
+
+
+.container(@size) {
+  .container {
+    width: @size+0px;
+  }
+}
+
+@media screen and (min-width: @phone) and (max-width: @flat) {
+  .container(750)
+}
+
+@media screen and (min-width: @flat) and (max-width: @desktop) {
+  .container(1000)
+}
+
+@media screen and (min-width: @desktop) {
+  .container(1200)
+}
+
+.media (@name) {
+  .grid(@gridNum);
+  .grid(@n,@i:1) when (@i =< @n) {
+    .@{name}@{i} {
+      width: (@i * 100%/@n);
+    }
+    .grid(@n, (@i + 1));
+  }
+}
+
+.media(x);
+
+@media screen and (max-width: @phone) {
+  .media(xl);
+}
+
+@media screen and (min-width: @phone) and (max-width: @flat) {
+  .media(xs);
+}
+
+@media screen and (min-width: @flat) and (max-width: @desktop) {
+  .media(xm);
+}
+
+@media screen and (min-width: @desktop) {
+  .media(xb);
+}
 
 //媒体查询
-@media (max-width: 760px) {
-  .show-l{
+@media screen and (max-width: @phone) {
+  .show-l {
     display: block !important;
   }
-  .hidden-l{
+
+  .hidden-l {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: @phone) and (max-width: @flat) {
+  .show-s {
+    display: block !important;
+  }
+
+  .hidden-s {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: @flat) and (max-width: @desktop) {
+  .show-m {
+    display: block !important;
+  }
+
+  .hidden-m {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: @desktop) {
+  .show-b {
+    display: block !important;
+  }
+
+  .hidden-b {
     display: none !important;
   }
 }
